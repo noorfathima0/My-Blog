@@ -2,13 +2,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff; 
-    color: #2E3A4D; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #fff;
+    color: #2E3A4D;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #2E3A4D;
@@ -18,12 +19,15 @@ header {
 }
 
 header h1 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 #searchBar {
     padding: 10px;
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
     border: 1px solid #2e3a4d;
     border-radius: 5px;
 }
@@ -31,7 +35,8 @@ header h1 {
 /* Main content */
 main {
     display: flex;
-    padding: 2rem;
+    flex-direction: column;
+    padding: 1.5rem;
     gap: 2rem;
 }
 
@@ -74,28 +79,9 @@ main {
     margin-bottom: 1rem;
 }
 
-.blog-post .tags {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.blog-post .tags span {
-    background-color: #eee;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    margin-right: 0.5rem;
-}
-
 /* Comment Section */
 .comment-section {
     margin-top: 20px;
-    border-radius: 1px solid #e0e0e0;
-}
-
-.comment-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
 }
 
 .comment-section input,
@@ -109,7 +95,7 @@ main {
 
 .comment-section button {
     padding: 0.5rem 1rem;
-    background: #F57C00; /* Sunshine Yellow */
+    background: #F57C00;
     color: #2E3A4D;
     border: none;
     border-radius: 5px;
@@ -120,16 +106,57 @@ main {
     background-color: #FFEB3B;
 }
 
+/* Footer */
 footer {
-    background: #2E3A4D; /* Dark Slate Gray */
+    background: #2E3A4D;
     color: #FFFFFF;
     padding: 20px 0;
     text-align: center;
     margin-top: 3rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer div {
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    #blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer div {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #blog-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
