@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <input type="text" id="searchBar" placeholder="Search posts..." onkeyup="searchPosts()">
+    </header>
+
+    <main>
+        <!-- Blog posts section -->
+        <section id="blog-posts">
+            <!-- Blog Post 1 -->
+            <article id="post1" class="blog-post">
+                <h2>Understanding JavaScript Closures</h2>
+                <p class="date">Published on: October 1, 2024</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwzNCXZ3w5tsyWlNyV05iUQW7pM_m8uzJ6wg&s" alt="Post Image 1">
+                <p>JavaScript closures are a fundamental concept in the language...</p>
+                
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <input type="text" id="name1" placeholder="Your name" required>
+                        <textarea id="comment1" placeholder="Your comment" required></textarea>
+                        <button type="button" onclick="addComment('commentList1', 'name1', 'comment1')">Submit</button>
+                    </form>
+                    <ul id="commentList1"></ul>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article id="post2" class="blog-post">
+                <h2>CSS Grid vs. Flexbox: Which Should You Use?</h2>
+                <p class="date">Published on: October 2, 2024</p>
+                <img src="https://dnycf48t040dh.cloudfront.net/fit-in/840x473/flex-vs-grid.jpeg" alt="Post Image 2">
+                <p>CSS Grid and Flexbox are two powerful layout systems...</p>
+                
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <input type="text" id="name2" placeholder="Your name" required>
+                        <textarea id="comment2" placeholder="Your comment" required></textarea>
+                        <button type="button" onclick="addComment('commentList2', 'name2', 'comment2')">Submit</button>
+                    </form>
+                    <ul id="commentList2"></ul>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article id="post3" class="blog-post">
+                <h2>How to Use React Hooks Effectively</h2>
+                <p class="date">Published on: October 3, 2024</p>
+                <img src="https://miro.medium.com/v2/resize:fit:900/1*3d0jsQppieVP5XL6KGK6YA.png" alt="Post Image 3">
+                <p>React Hooks have revolutionized how we write React components...</p>
+                
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <input type="text" id="name3" placeholder="Your name" required>
+                        <textarea id="comment3" placeholder="Your comment" required></textarea>
+                        <button type="button" onclick="addComment('commentList3', 'name3', 'comment3')">Submit</button>
+                    </form>
+                    <ul id="commentList3"></ul>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article id="post4" class="blog-post">
+                <h2>The Evolution of HTML: From HTML4 to HTML5</h2>
+                <p class="date">Published on: October 4, 2024</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMPhjW_W0r1k8jpEdq9z-QHlew5YBNkurYP4nWhBeJmwZlIude2YT49RUrAbIskOKHVc&usqp=CAU" alt="Post Image 4">
+                <p>HTML has come a long way since its inception, with HTML5 bringing new capabilities...</p>
+                
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <input type="text" id="name4" placeholder="Your name" required>
+                        <textarea id="comment4" placeholder="Your comment" required></textarea>
+                        <button type="button" onclick="addComment('commentList4', 'name4', 'comment4')">Submit</button>
+                    </form>
+                    <ul id="commentList4"></ul>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article id="post5" class="blog-post">
+                <h2>Web Performance Optimization Techniques</h2>
+                <p class="date">Published on: October 5, 2024</p>
+                <img src="https://miro.medium.com/v2/resize:fit:2526/1*_L4PsCyrhhSIXSL0XsiYew.png" alt="Post Image 5">
+                <p>Optimizing web performance is critical for user experience and SEO...</p>
+                
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <input type="text" id="name5" placeholder="Your name" required>
+                        <textarea id="comment5" placeholder="Your comment" required></textarea>
+                        <button type="button" onclick="addComment('commentList5', 'name5', 'comment5')">Submit</button>
+                    </form>
+                    <ul id="commentList5"></ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h4>About Us</h4>
+            <p>Learn more about our mission and vision.</p>
+        </div>
+        <div>
+            <h4>Products</h4>
+            <p>Explore our latest offerings.</p>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: contact@myblog.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
