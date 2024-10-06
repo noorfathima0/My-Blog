@@ -44,7 +44,7 @@ main {
 #blog-posts {
     background: #fff;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr; /* Single column for small screens */
     gap: 2rem;
     width: 100%;
 }
@@ -125,11 +125,65 @@ footer div {
 }
 
 /* Media Queries for Responsiveness */
-@media (min-width: 768px) {
+
+/* Small Devices (Max width: 480px, Mobile Phones) */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-post {
+        padding: 0.8rem;
+    }
+
+    footer div {
+        width: 90%;
+    }
+}
+
+/* Medium Devices (Max width: 768px, Tablets) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    #searchBar {
+        max-width: 250px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #blog-posts {
+        grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer div {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Large Devices (Min width: 1024px, Desktops) */
+@media (min-width: 1024px) {
     header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 1.5rem 2rem;
+        padding: 2rem;
     }
 
     main {
@@ -137,7 +191,7 @@ footer div {
     }
 
     #blog-posts {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
     }
 
     footer {
@@ -150,13 +204,25 @@ footer div {
     }
 }
 
-@media (min-width: 1024px) {
-    #blog-posts {
-        grid-template-columns: repeat(3, 1fr);
+/* Extra Large Devices (Min width: 1440px, Larger Desktops) */
+@media (min-width: 1440px) {
+    header {
+        padding: 2.5rem 3rem;
     }
 
-    footer {
-        flex-direction: row;
-        justify-content: space-around;
+    #searchBar {
+        max-width: 400px;
+    }
+
+    main {
+        padding: 2.5rem;
+    }
+
+    #blog-posts {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for extra large screens */
+    }
+
+    footer div {
+        width: 25%;
     }
 }
